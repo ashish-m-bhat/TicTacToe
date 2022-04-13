@@ -1,0 +1,31 @@
+.tile{
+    width:33%;
+    height:33%;
+    color:white;
+    font-size: 6vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile:hover{
+    cursor: pointer;
+}
+
+.topMost{
+    border-top:0px;
+    border-bottom: 1px solid silver;
+}
+.rightMost{
+    border-right:0px;
+    border-left: 1px solid silver;
+}
+.bottomMost{
+    border-bottom:0px;
+    border-top: 1px solid silver;
+}
+.leftMost{
+    border-left:0px;
+    border-right: 1px solid silver;
+}
