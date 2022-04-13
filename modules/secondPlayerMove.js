@@ -3,7 +3,7 @@ import checkIfWon from './checkIfWon.js'
 const secondPlayerValues=[];
 
 const secondPlayerMove = (selectedBox, totalPlays) =>{
-    selectedBox.innerHTML="O";
+    selectedBox.textContent="O";
     secondPlayerValues.push(selectedBox.id);
 
     if(totalPlays >=5)
