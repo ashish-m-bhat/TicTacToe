@@ -4,7 +4,7 @@ const firstPlayerValues=[];
 
 const firstPlayerMove = (selectedBox, totalPlays) =>{
     firstPlayerValues.push(selectedBox.id);
-    selectedBox.innerHTML="X";
+    selectedBox.textContent="X";
 
     if(totalPlays >=5){                         // Minimum moves needed to win is 5
       if(checkIfWon(firstPlayerValues)){
