@@ -10,9 +10,9 @@ const tiePointsPlaceholder = document.querySelector('#tiePointsPlaceholder');
 const setInitialPoints = () => {
     // Check if points entry already exists for each player
     // If not, set it to 0.
-    localStorage.setItem('playerX', localStorage.getItem('playerX') ?? 0);
-    localStorage.setItem('playerO', localStorage.getItem('playerO') ?? 0);
-    localStorage.setItem('tie', localStorage.getItem('tie') ?? 0);
+    localStorage.setItem('playerX', getPoints('playerX') ?? 0);
+    localStorage.setItem('playerO', getPoints('playerO') ?? 0);
+    localStorage.setItem('tie', getPoints('tie') ?? 0);
 
     // Set the points in the Html
     playerXPointsPlaceholder.innerHTML = localStorage.getItem('playerX');

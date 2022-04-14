@@ -4,7 +4,8 @@ import setPoints from './Points/setPoints.js';
 const secondPlayerValues=[];
 
 const secondPlayerMove = (selectedBox, totalPlays) =>{
-    //selectedBox.textContent="O";
+  secondPlayerValues.push(selectedBox.id);
+    selectedBox.textContent="O";
 
     if(totalPlays >=5)
     if(checkIfWon(secondPlayerValues)){
