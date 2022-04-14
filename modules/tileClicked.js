@@ -3,7 +3,7 @@ import setPoints from "./Points/setPoints.js";
 import playerOMove from "./playerOMove.js";
 
 let playerXTurn = true;
-let totalPlays=0;
+let totalPlays=0, allTilesClicked=[];
 
 export default function tileClicked(event){
     const selectedBox = event.target;
@@ -13,10 +13,10 @@ export default function tileClicked(event){
         return;
     totalPlays++;
     if(playerXTurn){
-        playerXMove(selectedBox, totalPlays);
+        playerXMove(selectedBox, allTilesClicked, totalPlays);
     }
     else{
-        playerOMove(selectedBox, totalPlays);
+        playerOMove(selectedBox, allTilesClicked, totalPlays);
     }
     playerXTurn=!playerXTurn;
 

@@ -3,8 +3,9 @@ import setPoints from './Points/setPoints.js';
 
 const playerXValues=[];
 
-const playerXMove = (selectedBox, totalPlays) =>{
+const playerXMove = (selectedBox, allTilesClicked, totalPlays) =>{
   playerXValues.push(selectedBox.id);
+  allTilesClicked.push(selectedBox.id);
     selectedBox.textContent="X";
 
     if(totalPlays >=5){                         // Minimum moves needed to win is 5

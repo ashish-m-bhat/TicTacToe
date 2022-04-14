@@ -3,8 +3,9 @@ import setPoints from './Points/setPoints.js';
 
 const playerOValues=[];
 
-const playerOMove = (selectedBox, totalPlays) =>{
+const playerOMove = (selectedBox, allTilesClicked, totalPlays) =>{
   playerOValues.push(selectedBox.id);
+  allTilesClicked.push(selectedBox.id);
     selectedBox.textContent="O";
 
     if(totalPlays >=5)
