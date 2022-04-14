@@ -1,14 +1,14 @@
 import checkIfWon from './checkIfWon.js'
 import setPoints from './Points/setPoints.js';
 
-const secondPlayerValues=[];
+const playerOValues=[];
 
-const secondPlayerMove = (selectedBox, totalPlays) =>{
-  secondPlayerValues.push(selectedBox.id);
+const playerOMove = (selectedBox, totalPlays) =>{
+  playerOValues.push(selectedBox.id);
     selectedBox.textContent="O";
 
     if(totalPlays >=5)
-    if(checkIfWon(secondPlayerValues)){
+    if(checkIfWon(playerOValues)){
 
       // Add a setTimout else, alert will be called before the final tile is marked.
       setTimeout(() => {
@@ -19,4 +19,4 @@ const secondPlayerMove = (selectedBox, totalPlays) =>{
     }
 
 }
-export default secondPlayerMove;
+export default playerOMove;

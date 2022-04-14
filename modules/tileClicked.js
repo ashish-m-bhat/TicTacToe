@@ -1,8 +1,8 @@
-import firstPlayerMove from "./firstPlayerMove.js";
+import playerXMove from "./playerXMove.js";
 import setPoints from "./Points/setPoints.js";
-import secondPlayerMove from "./secondPlayerMove.js";
+import playerOMove from "./playerOMove.js";
 
-let firstPlayerTurn = true;
+let playerXTurn = true;
 let totalPlays=0;
 
 export default function tileClicked(event){
@@ -12,13 +12,13 @@ export default function tileClicked(event){
     if(selectedBox.textContent !== '')
         return;
     totalPlays++;
-    if(firstPlayerTurn){
-        firstPlayerMove(selectedBox, totalPlays);
+    if(playerXTurn){
+        playerXMove(selectedBox, totalPlays);
     }
     else{
-        secondPlayerMove(selectedBox, totalPlays);
+        playerOMove(selectedBox, totalPlays);
     }
-    firstPlayerTurn=!firstPlayerTurn;
+    playerXTurn=!playerXTurn;
 
     // Match Drawn
     if(totalPlays === 9){

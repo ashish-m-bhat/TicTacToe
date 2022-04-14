@@ -5,7 +5,7 @@ import { setInitialPoints } from "./setPoints.js";
 const resetPoints = () => {
 
     // Prevent unnecessary reloads
-    if(getPoints('playerX')!=='0' && getPoints('playerO')!=='0' && getPoints('tie')!=='0')
+    if(getPoints('playerX')==='0' && getPoints('playerO')==='0' && getPoints('tie')==='0')
         return;
     localStorage.clear();
     location.reload();
