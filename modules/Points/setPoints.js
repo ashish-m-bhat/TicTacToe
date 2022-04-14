@@ -15,9 +15,9 @@ const setInitialPoints = () => {
     localStorage.setItem('tie', getPoints('tie') ?? 0);
 
     // Set the points in the Html
-    playerXPointsPlaceholder.innerHTML = localStorage.getItem('playerX');
-    playerOPointsPlaceholder.innerHTML = localStorage.getItem('playerO');
-    tiePointsPlaceholder.innerHTML = localStorage.getItem('tie');
+    playerXPointsPlaceholder.innerHTML = getPoints('playerX');
+    playerOPointsPlaceholder.innerHTML = getPoints('playerO');
+    tiePointsPlaceholder.innerHTML = getPoints('tie');
 }
 
 const setPoints = (player) =>{

@@ -1,32 +1,11 @@
-import firstPlayerMove from './firstPlayerMove.js';
-import setPoints, {setInitialPoints} from './Points/setPoints.js';
-import secondPlayerMove from './secondPlayerMove.js';
-
-let firstPlayerTurn = true;
-let totalPlays=0;
-const wrapper = document.getElementById('wrapperTile');
+import resetPoints from './Points/resetPoints.js';
+import {setInitialPoints} from './Points/setPoints.js';
+import tileClicked from './tileClicked.js';
 
 setInitialPoints();
 
-wrapper.addEventListener('click', (event)=>{
-    const selectedBox = event.target;
-    if(selectedBox.textContent !== '')
-        return;
-    totalPlays++;
-    if(firstPlayerTurn){
-        firstPlayerMove(selectedBox, totalPlays);
-    }
-    else{
-        secondPlayerMove(selectedBox, totalPlays);
-    }
-    firstPlayerTurn=!firstPlayerTurn;
+const wrapperTile = document.querySelector('#wrapperTile');
+wrapperTile.addEventListener('click', tileClicked);
 
-    if(totalPlays === 9){
-        setTimeout(() => {
-            setPoints('tie');
-            alert("match Draw");
-            location.reload();
-        }, 0);
-    }
-
- });
+const resetPointsButton = document.querySelector('#resetPointsButton');
+resetPointsButton.addEventListener('click', resetPoints);
