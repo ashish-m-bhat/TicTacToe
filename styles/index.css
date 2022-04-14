@@ -26,3 +26,17 @@ h1{
     top:15%;
     left:30%;
 }
+
+#pointsSection{
+  position: absolute;
+  bottom: 1vh;
+  width:50%;
+  margin-left: 25%;
+  height:10%;
+  color:white;
+  display: flex;
+  justify-content: space-around;
+
+  text-align: center;
+  font-size: 2vh;
+}
