@@ -3,7 +3,8 @@ import setPoints from "./Points/setPoints.js";
 import playerOMove from "./playerOMove.js";
 
 let playerXTurn = true;
-let totalPlays=0, allTilesClicked=[];
+const allTilesClicked=[];
+let totalPlays =0;
 
 export default function tileClicked(event){
     const selectedBox = event.target;
@@ -18,7 +19,12 @@ export default function tileClicked(event){
     else{
         playerOMove(selectedBox, allTilesClicked, totalPlays);
     }
-    playerXTurn=!playerXTurn;
+    // If opponent is Bot, increment totalPlays
+    // The botMove() would be called by playerXMove since the tileClicked wouldn't be really called due to a click event.
+    if(localStorage.getItem('isOpponentBot') === 'true')
+        totalPlays++;
+    else
+        playerXTurn=!playerXTurn;
 
     // Match Drawn
     if(totalPlays === 9){
