@@ -13,9 +13,9 @@ window.onload = () =>{
     const toggleUserButton = document.querySelector('#toggleUserButton');
     toggleUserButton.addEventListener('click', toggleOpponent);
 
-    // Check if the isOpponentBot bool exists in the localStorage
+    // Check if the isOpponentBot bool is true
     // If yes, change the toggle button content
-    // If not, it could be either false or null. In any case, set it to false.
+    // If not, it could be either false or null. In either case, set it to false.
     if(localStorage.getItem('isOpponentBot') === 'true')
         toggleUserButton.textContent = "Multi Player ?";
     else{
