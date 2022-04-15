@@ -42,3 +42,19 @@ h1{
 #controls:hover{
   opacity: 1;
 }
+
+@media only screen and (max-width: 1000px) {
+  h1{
+    position: absolute;
+    top:7vh;
+    left:42vw;
+  }
+  #wrapperTile{
+    width: 80vw;
+    height: 50vh;
+    margin-top: 22vh;
+  }
+  button{
+    width: 10vw;
+  }
+}
