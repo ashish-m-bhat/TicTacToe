@@ -1,5 +1,5 @@
-import checkIfWon from "./checkIfWon.js";
-import setPoints from "./Points/setPoints.js";
+import checkIfWon from "../checkIfWon.js";
+import setPoints from "../Points/setPoints.js";
 
 const wrapperTile = document.querySelector('#wrapperTile');
 const playerBotValues=[];

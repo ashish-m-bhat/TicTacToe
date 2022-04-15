@@ -1,6 +1,6 @@
-import playerXMove from "./playerXMove.js";
+import playerXMove from "./Moves/playerXMove.js";
 import setPoints from "./Points/setPoints.js";
-import playerOMove from "./playerOMove.js";
+import playerOMove from "./Moves/playerOMove.js";
 
 let playerXTurn = true;
 const allTilesClicked=[];
