@@ -5,6 +5,10 @@ import playerOMove from "./Moves/playerOMove.js";
 let playerXTurn = true;
 const allTilesClicked=[];
 let totalPlays =0;
+const didSomeOneWin = {
+    playerXWon:false,
+    playerOWon:false
+};
 
 export default function tileClicked(event){
     const selectedBox = event.target;
@@ -14,20 +18,20 @@ export default function tileClicked(event){
         return;
     totalPlays++;
     if(playerXTurn){
-        playerXMove(selectedBox, allTilesClicked, totalPlays);
+        playerXMove(selectedBox, allTilesClicked, totalPlays, didSomeOneWin);
     }
     else{
-        playerOMove(selectedBox, allTilesClicked, totalPlays);
+        playerOMove(selectedBox, allTilesClicked, totalPlays, didSomeOneWin);
     }
     // If opponent is Bot, increment totalPlays
     // The botMove() would be called by playerXMove since the tileClicked wouldn't be really called due to a click event.
-    if(localStorage.getItem('isOpponentBot') === 'true')
+    if(localStorage.getItem('isOpponentBot') === 'true' && totalPlays !== 9)
         totalPlays++;
     else
         playerXTurn=!playerXTurn;
 
     // Match Drawn
-    if(totalPlays === 9){
+    if(totalPlays === 9 && !didSomeOneWin.playerXWon && !didSomeOneWin.playerOWon){
         setTimeout(() => {
             setPoints('tie');
             alert("Match Drawn");
