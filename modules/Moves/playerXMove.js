@@ -4,13 +4,14 @@ import setPoints from '../Points/setPoints.js';
 
 const playerXValues=[];
 
-const playerXMove = (selectedBox, allTilesClicked, totalPlays) =>{
+const playerXMove = (selectedBox, allTilesClicked, totalPlays, didSomeOneWin) =>{
   playerXValues.push(selectedBox.id);
   allTilesClicked.push(selectedBox.id);
     selectedBox.textContent="X";
 
     if(totalPlays >=5){                         // Minimum moves needed to win is 5
       if(checkIfWon(playerXValues)){
+        didSomeOneWin.playerXWon = true;
 
         // Add a setTimout else, alert will be called before the final tile is marked.
           setTimeout(() => {
@@ -21,12 +22,12 @@ const playerXMove = (selectedBox, allTilesClicked, totalPlays) =>{
           return;
         }
     }
+    if(totalPlays === 9)
+      return;
     // If the opponent is Bot, call botMove()
     // In this case, the totalPlays would be incremented by the parent function, tileClicked()
     if(localStorage.getItem('isOpponentBot') === 'true'){
-
         botMove(allTilesClicked, totalPlays);
-
     }
 }
 export default playerXMove;
