@@ -4,27 +4,41 @@
 body{
   background-color: black;
 }
-h1{
-  color: white;
-  text-align: center;
-}
 #mainWrapper{
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: space-around ;
+  height: 100%;
+}
+h1{
+  color: silver;
+  text-align: center;
 }
 #wrapperTile{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    align-items: space-around;
+    align-content: space-around;
 
-    width:40%;
-    height: 70%;
+    width:40vw;
+    height: 70vh;
     margin: auto;
-
-    position:absolute;
-    top:15%;
-    left:30%;
+    margin-top:4vh;
 }
 
+#controls{
+  position: absolute;
+  bottom: 1vh;
+  width:100vw;
+  height:10vh;
+  color:white;
+  text-align: center;
+  font-size: 2vh;
+
+  display: flex;
+  justify-content: space-evenly;
+  opacity: 0.6;
+}
+#controls:hover{
+  opacity: 1;
+}
