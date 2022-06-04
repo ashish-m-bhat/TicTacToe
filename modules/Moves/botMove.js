@@ -22,7 +22,7 @@ const botMove = (allTilesClicked, totalPlays) =>{
                     // Add a setTimout else, alert will be called before the final tile is marked.
                     setTimeout(() => {
                         setPoints('playerO');
-                        alert("Player O wins");
+                        alert("Bot wins!");
                         location.reload();
                     }, 0);
                 }

@@ -2,7 +2,7 @@
 
 const  checkIfWon = (playerValues) =>{
   const possibleWinCombinations=["123","456","789","147","258","369","159","357"];
-  const currentPossibleCombinations=[];
+  let didIWin = false;
 
   for(let i=0;i<playerValues.length-2;i++)
   {
@@ -12,16 +12,13 @@ const  checkIfWon = (playerValues) =>{
       for(let k=j+1;k<playerValues.length;k++)
       {
         string = playerValues[i]+playerValues[j]+playerValues[k];
-        currentPossibleCombinations.push(string.split('').sort().join(''));
+        if(possibleWinCombinations.includes(string.split('').sort().join(''))){
+          didIWin = true;
+          return didIWin;
+        }
       }
     }
   }
-
-  let didIWin = false;
-  currentPossibleCombinations.forEach(eachCurrentPossibleCombination => {
-    if(possibleWinCombinations.indexOf(eachCurrentPossibleCombination) !== -1)
-        didIWin = true;
-  });
   return didIWin;
 }
 
