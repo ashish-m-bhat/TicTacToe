@@ -46,15 +46,25 @@ h1{
 @media only screen and (max-width: 1000px) {
   h1{
     position: absolute;
-    top:7vh;
-    left:42vw;
+    top:5%;
+    left:30%;
+    opacity: 0.5;
   }
   #wrapperTile{
     width: 80vw;
     height: 50vh;
     margin-top: 22vh;
   }
+  .tile{
+    font-size: 6vh;
+  }
   button{
-    width: 10vw;
+    width: auto;
+    opacity: 1;
+
+  }
+  button:hover{
+    height:auto;
+    width:auto;
   }
 }
