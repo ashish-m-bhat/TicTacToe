@@ -18,3 +18,9 @@
 
 
 ![Screenshot (81)](https://user-images.githubusercontent.com/61205415/180731178-98258342-ee94-4fa2-b239-7649fabf8d7c.png)
+
+
+                                    One a Mobile device
+                                    
+![image](https://user-images.githubusercontent.com/61205415/180733757-85d60bb5-0e10-4d18-af2b-7095e44d6cf1.png)
+
